@@ -8,6 +8,6 @@
 	});
 </script>
 
-<div class="bg-primary dark:bg-primaryDark -z-50 h-screen overflow-auto">
+<div class="bg-primary dark:bg-primaryDark h-screen overflow-auto">
 	{@render children()}
 </div>

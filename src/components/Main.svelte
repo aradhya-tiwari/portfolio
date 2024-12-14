@@ -1,4 +1,21 @@
-<main class=" w-full md:px-5">
+<script>
+    import Down from "../assets/icons/downArrow.svg";
+
+    let scrollDwn = $state(false);
+    function scrollDown() {
+        scrollDwn = true;
+    }
+    $effect(() => {
+        if (scrollDwn) {
+            console.log("Scrolling...");
+            window.scrollBy(0, 10000);
+            scrollDwn = false;
+            console.log("scroll false");
+        }
+    });
+</script>
+
+<div class="w-full md:px-5 h-[60%]">
     <div class=" w-full md:w-[60%] mt-[50%] md:mt-[15%] m-auto">
         <div
             class="w-full text-center text-[2rem] md:text-[3rem] dark:text-white m-auto text-black"
@@ -25,4 +42,11 @@
             in Mind
         </div>
     </div>
-</main>
+</div>
+<img
+    src={Down}
+    alt=""
+    srcset=""
+    class="m-auto hover:scale-125 transition-all fill-white text-gray-300"
+    onclick={scrollDown}
+/>
